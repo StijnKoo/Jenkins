@@ -1,0 +1,15 @@
+C:\Users\stijn\OneDrive - ROC van Twente\Documenten\GitHub\ITM-2\MyFrontend\bin\Debug\net8.0\MyFrontend.exe
+C:\Users\stijn\OneDrive - ROC van Twente\Documenten\GitHub\ITM-2\MyFrontend\bin\Debug\net8.0\MyFrontend.deps.json
+C:\Users\stijn\OneDrive - ROC van Twente\Documenten\GitHub\ITM-2\MyFrontend\bin\Debug\net8.0\MyFrontend.runtimeconfig.json
+C:\Users\stijn\OneDrive - ROC van Twente\Documenten\GitHub\ITM-2\MyFrontend\bin\Debug\net8.0\MyFrontend.dll
+C:\Users\stijn\OneDrive - ROC van Twente\Documenten\GitHub\ITM-2\MyFrontend\bin\Debug\net8.0\MyFrontend.pdb
+C:\Users\stijn\OneDrive - ROC van Twente\Documenten\GitHub\ITM-2\MyFrontend\obj\Debug\net8.0\MyFrontend.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\stijn\OneDrive - ROC van Twente\Documenten\GitHub\ITM-2\MyFrontend\obj\Debug\net8.0\MyFrontend.AssemblyInfoInputs.cache
+C:\Users\stijn\OneDrive - ROC van Twente\Documenten\GitHub\ITM-2\MyFrontend\obj\Debug\net8.0\MyFrontend.AssemblyInfo.cs
+C:\Users\stijn\OneDrive - ROC van Twente\Documenten\GitHub\ITM-2\MyFrontend\obj\Debug\net8.0\MyFrontend.csproj.CoreCompileInputs.cache
+C:\Users\stijn\OneDrive - ROC van Twente\Documenten\GitHub\ITM-2\MyFrontend\obj\Debug\net8.0\MyFrontend.sourcelink.json
+C:\Users\stijn\OneDrive - ROC van Twente\Documenten\GitHub\ITM-2\MyFrontend\obj\Debug\net8.0\MyFrontend.dll
+C:\Users\stijn\OneDrive - ROC van Twente\Documenten\GitHub\ITM-2\MyFrontend\obj\Debug\net8.0\refint\MyFrontend.dll
+C:\Users\stijn\OneDrive - ROC van Twente\Documenten\GitHub\ITM-2\MyFrontend\obj\Debug\net8.0\MyFrontend.pdb
+C:\Users\stijn\OneDrive - ROC van Twente\Documenten\GitHub\ITM-2\MyFrontend\obj\Debug\net8.0\MyFrontend.genruntimeconfig.cache
+C:\Users\stijn\OneDrive - ROC van Twente\Documenten\GitHub\ITM-2\MyFrontend\obj\Debug\net8.0\ref\MyFrontend.dll
