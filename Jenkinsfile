@@ -3,6 +3,7 @@ pipeline {
 
     environment {
         DOTNET_VERSION = '8.0' // .NET SDK versie
+        SNYK_TOKEN = credentials(6066de11-cf17-443c-9e3c-7c0b21bc7036) // Snyk token uit Jenkins credentials
     }
 
     stages {
@@ -15,7 +16,7 @@ pipeline {
 
         stage('Install .NET SDK') {
             steps {
-                echo 'Checking and installing .NET SDK if needed...'
+                echo 'Installing .NET SDK if not already installed...'
                 sh '''
                 if ! dotnet --version | grep ${DOTNET_VERSION}; then
                     echo ".NET SDK not found. Installing..."
@@ -23,8 +24,6 @@ pipeline {
                     chmod +x dotnet-install.sh
                     ./dotnet-install.sh --version ${DOTNET_VERSION} --install-dir /usr/share/dotnet
                     export PATH=$PATH:/usr/share/dotnet
-                else
-                    echo ".NET SDK ${DOTNET_VERSION} is already installed."
                 fi
                 '''
             }
@@ -33,22 +32,25 @@ pipeline {
         stage('Build Frontend') {
             steps {
                 echo 'Building the .NET frontend application...'
-                dir('frontend') { // Ga naar de frontend folder
+                dir('frontend') {
                     sh 'dotnet build'
                 }
             }
         }
 
-        stage('Security Test') {
+        stage('Snyk Security Test') {
             steps {
-                echo 'Running security scan (OWASP Dependency-Check)...'
-                sh '''
-                dependency-check.sh --project "EasyDevOpsApp" --scan . --format HTML --out reports
-                '''
+                echo 'Running Snyk security test...'
+                dir('frontend') {
+                    sh '''
+                    snyk auth ${SNYK_TOKEN}
+                    snyk test --all-projects --severity-threshold=high
+                    '''
+                }
             }
             post {
                 always {
-                    archiveArtifacts artifacts: 'reports/*', allowEmptyArchive: true
+                    echo 'Archiving Snyk test results...'
                 }
             }
         }
