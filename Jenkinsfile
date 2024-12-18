@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOTNET_VERSION = '8.0' // .NET SDK versie
-        SNYK_TOKEN = credentials(6066de11-cf17-443c-9e3c-7c0b21bc7036) // Snyk token uit Jenkins credentials
+        SNYK_TOKEN = credentials('snyk-api-token') // Snyk token uit Jenkins credentials
     }
 
     stages {
