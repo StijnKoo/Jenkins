@@ -10,7 +10,11 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo 'Cloning repository...'
-                checkout scm
+                checkout([$class: 'GitSCM', 
+                    branches: [[name: '*/main']],
+                    userRemoteConfigs: [[url: 'https://github.com/StijnKoo/Jenkins.git']],
+                    extensions: [[$class: 'CloneOption', shallow: false]]
+                ])
             }
         }
 
