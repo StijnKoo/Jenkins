@@ -36,7 +36,7 @@ pipeline {
         stage('Build Frontend') {
             steps {
                 echo 'Building the .NET frontend application...'
-                dir('frontend') {
+                dir('MyFrontend') {
                     sh 'dotnet build'
                 }
             }
