@@ -45,7 +45,7 @@ pipeline {
       steps {
         echo 'Testing...'
         snykSecurity(
-          snykInstallation: 'StijnK',
+          snykInstallation: 'StijnKoo',
           snykTokenId: '6066de11-cf17-443c-9e3c-7c0b21bc7036',
           // place other parameters here
         )
