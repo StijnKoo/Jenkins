@@ -41,7 +41,7 @@ pipeline {
                 }
             }
         }
-            stage('Test') {
+    stage('Test') {
       steps {
         echo 'Testing...'
         snykSecurity(
@@ -50,6 +50,7 @@ pipeline {
           // place other parameters here
         )
       }
+    }
 
         stage('Snyk Security Test') {
             steps {
