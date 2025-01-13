@@ -52,16 +52,12 @@ pipeline {
       }
     }
 
-        stage('Snyk Security Test') {
-            steps {
-                echo 'Running Snyk security test...'
-                dir('frontend') {
-                    sh '''
-                    snyk auth ${SNYK_TOKEN}
-                    snyk test --all-projects --severity-threshold=high
-                    '''
-                }
-            }
+stage('Snyk Security Test') {
+    steps {
+        snykSecurity toolName: 'StijnKoo', projectName: 'MyProject'
+    }
+}
+
             post {
                 always {
                     echo 'Archiving Snyk test results...'
